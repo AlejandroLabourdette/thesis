@@ -1,2 +1,97 @@
 \chapter*{Introducción}\label{chapter:introduction}
 \addcontentsline{toc}{chapter}{Introducción}
+
+El término, `certificar' describe cualquier proceso mediante el cual se emite una validación a determinada característica, aptitud, etc. En educación, la certificación se usa en múltiples escenarios: como evidencia de [\cite{grech2017blockchain}] logros de los resultados del aprendizaje; la competencia de un profesor; una organización educativa o un curso que cumpla con ciertos criterios de calidad; o un organismo que fue autorizado para emitir certificaciones.
+
+Como observa Schmidt, los sistemas de certificados obsoletos limitan nuestra capacidad de crear nuevos caminos hacia la educación.
+``Los certificados no solo determinan quién puede transmitir el conocimiento, sino que también nos ayudan a identificar a los miembros de una comunidad que tienen ciertas habilidades'' [\cite{schmidt2015certificates}].
+``Han surgido como una señal transnacional e interdisciplinaria de capacidad y habilidad en un entorno en el que no se pueden presuponer otras características (idioma, nacionalidad, identidad religiosa)'' [\cite{smolenski2017blockchain}]. 
+
+Si bien un certificado puede ser emitido por cualquier institución o persona, dando fe de determinado criterio, el objetivo de un Sistema de Certificación es que sus credenciales sean ampliamente aceptados por terceros. Esto requiere construir una confianza significativa en el sistema y sus procesos. 
+
+Construir esa confianza pasa por verificar quién está involucrado en la transacción. Es importante poder comprobar la identidad tanto del emisor como del titular del certificado. Se necesitan también de procesos estandarizados para su creación y mecanismos q comprueben y aseguren que estos estándares se cumplen. La seguridad del sistema es importante para esa confianza: no pude suceder que se introduzcan credenciales falsas. La última de las claves es asegurar que los datos sean accesibles en cualquier momento.
+
+Los certificados educativos pueden servir para reconocer la realización de una experiencia de aprendizaje específica. Ejemplos de esto podrían incluir un	certificado de fin de estudios o uno de asistencia/participación. Pueden avalar la totalidad del aprendizaje logrado en un área particular como la obtención de un título. También es posible que representen experiencias específicas que contribuyan al aprendizaje, como credenciales que acrediten la finalización de una investigación u otro tipo de experiencia laboral. Hacen ver la adquisición de competencias específicas, por ejemplo reconocimiento del aprendizaje previo. Además pueden avalar el logro de ciertos criterios de excelencia  al ganar premios por logros o al graduarse `con honores'.
+
+La mayoría de los registros todavía se emiten en papel u otros formatos físicos, aunque los gobiernos y las industrias están realizando esfuerzos de digitalización en todo el mundo [\cite{cheng2017using}]. No existe un ``formato perfecto'' para las credenciales, y muchos países utilizan híbridos en los que los certificados en papel están respaldados por bases de datos digitales. Sin embargo, las importantes limitaciones de cada sistema muestran claramente la necesidad de una tecnología de certificación mejor y más robusta.
+
+Los certificados en papel todavía se consideran en muchos sectores como la forma de certificación más segura, ya que:
+\begin{itemize}
+	\item Son difícil de falsificar debido a las características de seguridad integradas en los propios certificados.
+	\item (Por lo general) Están en poder directo del destinatario, quien por lo tanto tiene control total sobre su certificado
+	\item Son relativamente fácil de almacenar de forma segura durante periodos de tiempo prolongados, e.g. guardándolos en una caja fuerte.
+	\item Pueden ser presentados por el destinatario en cualquier lugar, a cualquier persona para cualquier propósito.
+\end{itemize}
+Sin embargo, los certificados en papel también tienen desventajas significativas:
+\begin{itemize}
+	\item Si bien es difícil de falsificar, ningún certificado es inmune al riesgo de falsificación. Por lo tanto, el emisor está obligado a mantener un registro central de los certificados emitidos que puede utilizarse para verificar su autenticidad
+	\item Los registros de certificados son puntos únicos de falla: si bien pueden seguir siendo válidos, se pierde la capacidad de verificarlos.
+	\item Llevar un registro de reclamaciones de este tipo y responder a las consultas sobre la validez de los certificados es un proceso manual que requiere importantes recursos humanos.
+	\item Los elementos de seguridad del certificado físico se derivan exclusivamente del nivel de dificultad y los conocimientos necesarios para redactar el documento. Cuanto más seguro sea el certificado, más caro será producirlo.
+	\item No existen limitaciones a la capacidad del emisor de indicar de manera fraudulenta el sello de tiempo u otros detalles del certificado.
+	\item Una vez emitido, no hay forma de revocar un certificado sin que el propietario renuncie al control del mismo.
+	\item Si un tercero necesita utilizar los certificados, e.g. para verificar aptitudes en un CV, deben leer y comprobar cada certificado de forma individual y manual, un proceso que consume mucho tiempo.
+\end{itemize}
+
+Los certificados digitales que no utilizan tecnología blockchain tienen ventajas sobre los de papel:
+\begin{itemize}
+	\item Requieren muchos menos recursos para su emisión, mantenimiento y uso, ya que:
+	\begin{itemize}
+		\item La veracidad de los certificados se puede comprobar con el registro automáticamente, sin intervención humana.
+		\item Cuando un tercero necesite utilizar los certificados, estos pueden cotejarse, verificarse e incluso resumirse automáticamente si se emiten en un formato estandarizado.
+		\item La seguridad del certificado se deriva de la seguridad de los protocolos criptográficos, que aseguran que el certificado sea barato de producir pero extremadamente costoso de reproducir por cualquier persona que no sea el emisor.
+	\end{itemize}
+	\item El emisor puede revocar los certificados.
+	\item Ciertos tipos de fraude del emisor, como cambiar la marca de tiempo o la serie del certificado, pueden ser imposibles según el diseño del sistema.
+\end{itemize}
+Sin embargo, los certificados digitales que no usan tecnología blockchain también tienen desventajas significativas:
+\begin{itemize}
+	\item Sin el uso de firmas digitales, son extremadamente fáciles de falsificar.
+	\item Cuando se utilizan firmas digitales, estas requieren la participación de terceros proveedores de certificados para garantizar la integridad de la transacción; estos terceros tienen un control significativo sobre todos los aspectos de la certificación y verificación, proceso del cual se puede abusar.
+	\item En muchos países, no existe un estándar abierto de uso universal para las firmas digitales, lo que da lugar a certificados que solo pueden verificarse en el contexto de ecosistemas de software específicos.
+	\item Es más fácil destruir registros electrónicos: mantenerlos seguros requiere sistemas sofisticados de respaldo de varios niveles que son propensos a fallar.
+	\item Si falla el registro, los certificados mismos pierden su valor ya que, a diferencia de los certificados en papel, no tienen valor intrínseco sin el registro.
+	\item Los registros de certificados digitales son propensos a filtraciones de datos a gran escala.
+\end{itemize}
+
+Cuba no está exenta de estos problemas. Un ejemplo de puntos de fallo es la legalización de certificados académicos, proceso que se inicia cuando se desean validar y compartir las credenciales educativas a nivel internacional. Sobre este se hizo un estudio durante la realización del documento, consultando la experiencia de 37 graduados, para conocer sus pasos y duración. 
+Dicho proceso se puede dividir en dos partes fundamentales: la primera es que el Ministerio de Educación Superior valide que la persona posea a su nombre el título emitido por la universidad; la segunda es que el Ministerio de Relaciones Exteriores lo confirme para su uso internacional. 
+Tienden a tomar el mismo tiempo ambos pasos.
+
+Hasta ahora, en la práctica, validar el Título demora alrededor de 21 días, pero si se incluye el Plan de Estudios y la Certificación de Notas se puede alcanzar los 3 meses. 
+Es necesario tanto para el cliente como para el que da el servicio disminuir estos plazos y hacer más eficiente este proceso.
+El impacto de este trabajo, es minimizar el tiempo que le toma al Ministerio de Educación Superior realizar las gestiones pertinentes, hacerlo de una manera más ágil y sentando las bases para una automatización en las operaciones.
+
+La tecnología Blockchain es ideal como una nueva infraestructura para asegurar, compartir y verificar los logros de aprendizaje [\cite{smolenski2016academic}]. Los certificados digitales que están protegidos por ella tienen ventajas significativas sobre los certificados digitales "normales", ya que:
+\begin{itemize}
+	\item No pueden ser falsificados — es posible verificar con certeza que el certificado fue originalmente emitido y recibido por las personas indicadas
+	\item La verificación del certificado puede ser realizada por cualquier persona que tenga acceso a la blockchain, con un software de código abierto fácilmente disponible; no hay necesidad de intermediarios.
+	\item Debido a que no se requieren partes intermediarias para validar el certificado, este aún puede validarse incluso si la organización que lo emitió ya no existe o ya no tiene acceso al registro emitido.
+	\item El registro de certificados emitidos y recibidos en blockchain solo puede destruirse si se destruyen todas las copias en todos los ordenadores del mundo que alojan el software.
+	\item El hash es simplemente una forma de crear un `enlace' al documento original que está en manos del usuario. Esto significa que el mecanismo anterior permite publicar la firma de un documento, sin necesidad de publicar el documento mismo, preservando así la privacidad de los datos.
+\end{itemize}
+
+Los principales beneficios de usar blockchain para gestionar los certificados incluyen reducciones en el tiempo de latencia y el costo de compartir datos en un entorno controlado [\cite{alammary2019blockchain}][\cite{azeez2021design}][\cite{aljazaery2022encryption}]. Las contribuciones de este documento se pueden considerar en tres aspectos. Primero, se realiza una revisión para analizar las razones, ventajas, inconvenientes y desafíos futuros de aplicar la tecnología blockchain para compartir datos. En segundo lugar, se desarrolla un sistema utilizando Hyperledger Fabric (framework privado basado en blockchain) para las certificaciones de los estudiantes y el intercambio controlado de información para las partes que la necesitan. Tercero, se mide el tiempo promedio y la latencia de las transacciones para calcular la eficiencia del sistema propuesto.
+
+La solución aquí propuesta es una de dos partes que conforman la propuesta de Sistema de Gestión de Certificados Académicos. Estas partes son: la lógica que describe el sistema; y la interfaz de usuario que garantiza una experiencia agradable y segura a quien la use. La Interfaz de usuario es el contenido del Trabajo de Diploma de Ariel Huerta para obtener el título de Licenciado en Ciencias de la Computación [\cite{arie}]. 
+
+El \textbf{objetivo general} de este trabajo es crear la lógica de una plataforma que de soporte a estos servicios de validar y compartir certificados.
+
+Se tienen que alcanzar \textbf{objetivos específicos} que tributen a dicho objetivo general:
+\begin{itemize}
+	\item Establecer un estándar de los datos que describan los certificados universitarios independientemente de quien los emita.
+	\item Definir los roles que pueden tener los usuarios que sean parte del sistema.
+	\item Crear un sistema seguro de autenticación para la plataforma utilizando una base de datos local a cada centro emisor de certificado.
+	\item Crear un ambiente transparente para la manipulación y edición de los certificados utilizando Hyperledger Fabric
+	\item Dado que este es un proyecto complementado, tener desacoplado y bien definido donde se comunican la interfaz de usuario con la lógica, mediante la utilización de endpoints   
+\end{itemize}
+
+El documento está estructurado en tres capítulos: el capítulo 1 es `Estado del Arte'. Se hace un recorrido por trabajos relacionados, la tecnología blockchain, compartir datos, conceptos de contratos inteligentes, etc. El capítulo 2 es `Propuesta'. En este capítulo se profundiza en el problema a resolver a través de su descripción y se realiza una propuesta de solución. Se identifican los requisitos funcionales y no funcionales que deben tenerse en cuenta. Por último, a partir de los requisitos se realiza una descripción de los casos de uso y se presentan los diagramas relacionados con estos. El capítulo 3 es ``Detalles de Implementación y experimentos'': el contenido de este último capítulo se enfoca en la implementación y validación de la lógica propuesta. Se realizan las pruebas definidas para el sistema garantizando su correcto funcionamiento y culmina con la validación de la hipótesis de investigación.
+
+
+
+
+
+
+
+
