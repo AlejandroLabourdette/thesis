@@ -73,20 +73,20 @@ La tecnología Blockchain es ideal como una nueva infraestructura para asegurar,
 
 Los principales beneficios de usar blockchain para gestionar los certificados incluyen reducciones en el tiempo de latencia y el costo de compartir datos en un entorno controlado [\cite{alammary2019blockchain}][\cite{azeez2021design}][\cite{aljazaery2022encryption}]. Las contribuciones de este documento se pueden considerar en tres aspectos. Primero, se realiza una revisión para analizar las razones, ventajas, inconvenientes y desafíos futuros de aplicar la tecnología blockchain para compartir datos. En segundo lugar, se desarrolla un sistema utilizando Hyperledger Fabric (framework privado basado en blockchain) para las certificaciones de los estudiantes y el intercambio controlado de información para las partes que la necesitan. Tercero, se mide el tiempo promedio y la latencia de las transacciones para calcular la eficiencia del sistema propuesto.
 
-La solución aquí propuesta es una de dos partes que conforman la propuesta de Sistema de Gestión de Certificados Académicos. Estas partes son: la lógica que describe el sistema; y la interfaz de usuario que garantiza una experiencia agradable y segura a quien la use. La Interfaz de usuario es el contenido del Trabajo de Diploma de Ariel Huerta para obtener el título de Licenciado en Ciencias de la Computación [\cite{arie}]. 
-
-El \textbf{objetivo general} de este trabajo es crear la lógica de una plataforma que de soporte a estos servicios de validar y compartir certificados.
+El \textbf{problema a resolver} en este trabajo es encontrar una manera de gestionar los certificados académicos que sea más ágil que los procesos existentes sin perder de vista la seguridad. Su \textbf{objetivo general} es especificar la lógica de una plataforma que de soporte a estos servicios de emisión, intercambio y verificación de certificados.
 
 Se tienen que alcanzar \textbf{objetivos específicos} que tributen a dicho objetivo general:
 \begin{itemize}
 	\item Establecer un estándar de los datos que describan los certificados universitarios independientemente de quien los emita.
-	\item Definir los roles que pueden tener los usuarios que sean parte del sistema.
-	\item Crear un sistema seguro de autenticación para la plataforma utilizando una base de datos local a cada centro emisor de certificado.
+	\item Definir los roles que pueden tener los diferentes usuarios que participen en el sistema.
+	\item Crear un sistema seguro de autenticación de usuarios para la plataforma utilizando una base de datos relacional.
 	\item Crear un ambiente transparente para la manipulación y edición de los certificados utilizando Hyperledger Fabric
 	\item Dado que este es un proyecto complementado, tener desacoplado y bien definido donde se comunican la interfaz de usuario con la lógica, mediante la utilización de endpoints   
 \end{itemize}
 
-El documento está estructurado en tres capítulos: el capítulo 1 es `Estado del Arte'. Se hace un recorrido por trabajos relacionados, la tecnología blockchain, compartir datos, conceptos de contratos inteligentes, etc. El capítulo 2 es `Propuesta'. En este capítulo se profundiza en el problema a resolver a través de su descripción y se realiza una propuesta de solución. Se identifican los requisitos funcionales y no funcionales que deben tenerse en cuenta. Por último, a partir de los requisitos se realiza una descripción de los casos de uso y se presentan los diagramas relacionados con estos. El capítulo 3 es ``Detalles de Implementación y experimentos'': el contenido de este último capítulo se enfoca en la implementación y validación de la lógica propuesta. Se realizan las pruebas definidas para el sistema garantizando su correcto funcionamiento y culmina con la validación de la hipótesis de investigación.
+La solución aquí se presenta  se complementa con otro trabajo de Tesis de Diploma que trata de una propuesta de la interfaz de usuario para proporcionar una experiencia agradable y segura a quien la use [\cite{arie}].
+
+El documento está estructurado en tres capítulos: el capítulo 1 es `Revisión de la Tecnología Blockchain y sus aplicaciones'. Se hace un recorrido por trabajos relacionados, la tecnología blockchain, compartir datos y conceptos de contratos inteligentes. El capítulo 2 es `Propuesta de un sistema para gestionar los Certificados Académicos'. En este capítulo se profundiza en el problema a resolver a través de su descripción y se realiza una propuesta de solución. Se identifican los requisitos funcionales y no funcionales que deben tenerse en cuenta. Por último, a partir de los requisitos se realiza una descripción de los casos de uso y se presentan los diagramas relacionados con estos. El capítulo 3 es ``Detalles de Implementación y experimentos'': el contenido de este último capítulo se enfoca en la implementación y validación de la lógica propuesta. Se realizan las pruebas definidas para el sistema garantizando su correcto funcionamiento y culmina con la validación de la hipótesis de investigación.
 
 
 

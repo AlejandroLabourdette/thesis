@@ -1,15 +1,15 @@
-\chapter{Estado del Arte}\label{chapter:state-of-the-art}
+\chapter{Revisión de la Tecnología Blockchain y sus aplicaciones}\label{chapter:state-of-the-art}
 
 En este primer capítulo, se pretende explicar el estado de las tecnologías blockchain, en las que se basa el tema central de este proyecto.
 Se hace un análisis de sus orígenes para poder comprender su evolución.
 Además, se detalla sobre el framework que será usado para la solución.
 Finalmente se hace un estudio sobre trabajos con un objetivo similar al de este proyecto.
 
-\section{Tecnología Blockchain Aplicada}
+\section{Conceptos fundamentales de la Tecnología Blockchain Aplicada}
 
-Esta sección presenta una visión genérica de la tecnología blockchain e introduce las características principales de un sistema de almacenamiento de datos descentralizado, confiable e inmutable.
+Esta sección presenta una visión general de la tecnología blockchain e introduce las características principales como sistema de almacenamiento de datos descentralizado, confiable e inmutable.
 
-\subsection{Inicios}
+\subsection{Los orígenes}
 
 El dinero es un medio de cambio a través del cual se adquieren bienes y servicios o se utiliza para el pago de obligaciones. Todos los días se asocia un precio a los objetos de acuerdo con su valor intrínseco y a otros factores, como su disponibilidad (oferta) y las necesidades de las personas (demanda). Su representación ha cambiado a lo largo del tiempo: hojas de árboles raros, minerales preciosos o certificados bancarios. Todas sus representaciones cumplen que son raras de obtener y difíciles de imitar. Cuando se encuentra una forma de generar esta representación sin tener respaldo en bienes y servicios entonces este pierde su capacidad de compra.
 
@@ -17,15 +17,15 @@ Desde la aparición de los ordenadores personales y posteriormente de Internet s
 
 En la década de los 90 del siglo pasado aparecen diferentes trabajos sobre soluciones descentralizadas para realizar pagos electrónicos que no dependan de la intervención de ninguna entidad central supervisora ni reguladora.
 
-En 1991 aparece el primer trabajo de una cadena de bloques segura utilizando criptografía que fue evolucionando hasta que en 1998, Wei Dai describe una solución descentralizada para pagos electrónicos basada en criptografía de clave pública. Este primer trabajo es evolucionado por otros autores hasta que en 2008 se publica, con el pseudónimo de Satoshi Nakamoto, el artículo "Bitcoin: A Peer-to-Peer Electronic Cash System" [\cite{nakamoto2008bitcoin}] que define el mecanismo para implementar una moneda digital: Bitcoin. Este se basa en el uso de las cadenas de bloques (blockchain) para registrar las transacciones en una red peer-to-peer.
+En 1991 aparece el primer trabajo de una cadena de bloques segura utilizando criptografía[\cite{200}] que fue evolucionando hasta que en 1998, Wei Dai[\cite{201}] describe una solución descentralizada para pagos electrónicos basada en criptografía de clave pública. Este primer trabajo es evolucionado por otros autores hasta que en 2008 se publica, con el pseudónimo de Satoshi Nakamoto, el artículo "Bitcoin: A Peer-to-Peer Electronic Cash System" [\cite{nakamoto2008bitcoin}] que define el mecanismo para implementar una moneda digital: Bitcoin. Este se basa en el uso de las cadenas de bloques (blockchain) para registrar las transacciones en una red peer-to-peer.
 
-\subsection{Aplicaciones}
-Durante la última década, este invento se ha convertido en una de las tecnologías más efectivas que resultó en la mejora de varias industrias, como las finanzas, la atención médica, la educación y las fábricas. Algunas de las aplicaciones generales que pueden ser implementadas de manera universal son: la identidad digital, los smart contracts y la trazabilidad verificable.
+\subsection{Aplicaciones de blockchain}
+Durante la última década, la aplicación de blockchain se ha extendido a otras áreas, que trascienden el dinero y las criptomonedas, como las finanzas, la salud, la educación, el encadenamiento productivo, la gobernanza. Algunas de las aplicaciones generales transversales que pueden ser implementadas de manera universal son: la identidad digital y la trazabilidad verificable.
 
 Con una identidad digital cada usuario puede elegir qué información de sí mismo mantiene de manera pública o privada ante terceros. Los smart contracts o contratos inteligentes son acuerdos digitales que se realizan entre dos o más partes. Estos contratos se ejecutan de manera automática cuando se cumple determinada condición aceptada previamente por las partes involucradas. Como toda la información registrada en la blockchain queda distribuida e inalterable, esta tecnología permite que se pueda realizar tracking o seguimiento a ciertos registros específicos. De este modo, los usuarios pueden ver los detalles de las transacciones o actualizaciones relacionadas con un elemento en particular.
 
-\subsection{Características}
-Blockchain tiene características técnicas que la convierten en una tecnología prometedora con un amplio espectro de aplicaciones. Se comenta a menudo que es la solución para muchos de los problemas actuales. De manera sintetizada una blockchain se define como un sistema de almacenamiento descentralizado, distribuido e inmutable: [\cite{zheng2017overview}][\cite{makridakis2019blockchain}].
+\subsection{Características básicas}
+De manera sintetizada una blockchain se define como un sistema de almacenamiento descentralizado, distribuido e inmutable: [\cite{zheng2017overview}][\cite{makridakis2019blockchain}].
 \begin{itemize}
 	\item Descentralización: No se necesita confiar en una sola entidad, sino que se distribuyen las responsabilidades entre múltiples o todos los nodos.
 	\item Inmutabilidad: Una vez que un número suficiente de participantes de la blockchain aceptan los datos y los agregan, la información se almacena de forma permanente e inmutable.
@@ -44,22 +44,25 @@ Blockchain tiene características técnicas que la convierten en una tecnología
 	\label{fig:1}
 \end{figure}
 
-Para implementar una aplicación basada en blockchain, se deben considerar los tipos existentes \ref{fig:1} de acuerdo con los requisitos del sistema [\cite{alhadhrami2017introducing}]:
+Para implementar una aplicación basada en blockchain, se deben considerar los tipos existentes de blockchain en cuanto a su privacidad (Figura \ref{fig:1}) [\cite{alhadhrami2017introducing}]:
 \begin{itemize}
-	\item Pública: Está completamente descentralizada y no requiere permisos, lo que significa que es visible para todos y no tiene un único propietario. El proceso de consenso está abierto a todos los que deseen participar. Un ejemplo de una cadena de bloques pública es Bitcoin.
+	\item Público: La red está completamente descentralizada y no requiere permisos para participar. Lo que significa que es visible para todos y no tiene un único propietario. El protocolo y proceso de consenso está abierto a todos los que deseen participar. Un ejemplo de una cadena de bloques pública es Bitcoin.
 	\item Privado: Este tipo de blockchain es propiedad de una sola entidad que controla la participación en la red de transacciones. Por lo tanto, también se le llama blockchain autorizada. En este tipo no se necesita un algoritmo de consenso para crear bloques.
-	\item Híbrido (consorcio): Es pública y autorizada, lo que significa que solo tienen acceso un grupo específico de participantes.
+	\item Híbrido (consorcio): Es pública y autorizada, lo que significa que no tienen un único propietario sino un grupo específico de participantes.
 \end{itemize}
 
 \subsection{Contratos inteligentes}
 
-Un contrato inteligente es un acuerdo de ejecución automática entre dos o más partes escrito directamente en un código sin la necesidad de una autoridad central, un sistema legal o un mecanismo de ejecución externo. Por lo tanto, un contrato inteligente se define como un código que aplica reglas lógicas para controlar los activos digitales. Este código se ejecuta en la parte superior de una red blockchain. Un contrato inteligente define acuerdos contractuales que controlan el ciclo de vida de una transacción propuesta contenida en el world state. Además, el contrato inteligente empaqueta la transacción  propuesta en el chaincode, que luego se implementa en la red blockchain [\cite{zhao2021security}]. Desde 2016, ha habido un interés creciente en las aplicaciones de contratos inteligentes basadas en blockchain. Todas estas aplicaciones se centran en la programabilidad de los contratos inteligentes además de la seguridad, la privacidad y la escalabilidad [\cite{macrinici2018smart}]
+Un contrato inteligente es un acuerdo de ejecución automática entre dos o más partes escrito directamente en un código sin la necesidad de una autoridad central, un sistema legal o un mecanismo de ejecución externo para su ejecución. Por lo tanto, un contrato inteligente se define como un código que aplica reglas lógicas para controlar las transacciones que ocurren en la blockchain. Este código se ejecuta en la parte superior de una red blockchain. Un contrato inteligente define acuerdos contractuales que controlan el ciclo de vida de una transacción propuesta. Además, el contrato inteligente empaqueta dicha transacción en el chaincode, que luego se implementa en la red blockchain [\cite{zhao2021security}]. Desde 2016, ha habido un interés creciente en las aplicaciones de contratos inteligentes basadas en blockchain. Todas estas aplicaciones se centran en la programabilidad de los contratos inteligentes además de la seguridad, la privacidad y la escalabilidad [\cite{macrinici2018smart}]
 
 \section{Hyperledger Fabric}
-Desde la invención de blockchain, se han desarrollado varias herramientas de desarrollo. Estas herramientas se utilizan para escribir, verificar, probar y depurar código sobre estas tecnologías. 
-La más adecuada para el problema que se resuelve es Hyperledger Fabric.[\cite{kumutha2021impact}], Hyperledger es una comunidad de código abierto alojada por The Linux Foundation [\cite{nakamoto2008bitcoin}]. Ofrece todo el potencial de la tecnología blockchain, como la privacidad, el intercambio de información y la inmutabilidad. Existen varios subproyectos que tienen diferentes características, e incluyen Composer, Cello, Explorer, Burrow Sawtooth y Caliper [\cite{ullah2021blockchain}].
 
-Hyperledger Fabric tiene incorporado el uso de contratos inteligentes para definir las reglas de la aplicación. Entre sus principales características están [\cite{ullah2021blockchain}]: ser una red autorizada, admitir transacciones confidenciales, no necesitar criptomonedas para participar y ser programable. Estas especificidades establecen confianza, transparencia y responsabilidad.
+Desde la invención de blockchain, se han creado varias plataforma para dar soporte al desarrollo de aplicaciones basadas en blockchain.
+Estas herramientas se utilizan para escribir, verificar, probar y depurar código sobre estas tecnologías. 
+La más adecuada para el problema que se pretende solucionar con este trabajo es Hyperledger Fabric (HLF) [\cite{kumutha2021impact}], Hyperledger es una comunidad de código abierto alojada por The Linux Foundation [\cite{nakamoto2008bitcoin}]. 
+Ofrece todo el potencial de la tecnología blockchain, como la privacidad, el intercambio de información y la inmutabilidad. Existen varios subproyectos que tienen diferentes características, e incluyen Composer, Cello, Explorer, Burrow Sawtooth y Caliper [\cite{ullah2021blockchain}].
+
+Hyperledger Fabric tiene incorporado el uso de contratos inteligentes para definir las reglas de la aplicación. Entre sus principales características están: ser una red autorizada, admitir transacciones confidenciales, no necesitar criptomonedas para participar y ser programable [\cite{ullah2021blockchain}]. Estas especificidades establecen confianza, transparencia y responsabilidad.
 
 \begin{figure}[h!]
 	\centering
@@ -71,9 +74,9 @@ Hyperledger Fabric tiene incorporado el uso de contratos inteligentes para defin
 
 \subsection{Componentes}
 
-Hyperledger Fabric consta de varias componentes principales: nodos peer y orderer, chaincode, etc. Estas componentes pueden verse en \ref{fig:2}. Cada componente tiene un rol único para diferentes propósitos.
+HLF consta de varias componentes principales: nodos peer, orderer y chaincode (ver Figura \ref{fig:2}). Cada componente tiene un rol único para diferentes propósitos.
 
-Los nodos orderer implementan el protocolo de consenso para ordenar las transacciones enviadas por los miembros (clientes) y las clasificará utilizando métodos de consenso . Hyperledger recomienda tres: Solo (dev), kafka, Raft. El ordenador utiliza un protocolo de transmisión atómica para recibir instrucciones de datos. Se detallará un poco más en las componentes del framework
+Los nodos orderer implementan el protocolo de consenso para ordenar las transacciones enviadas por los miembros (clientes) y las clasificará utilizando métodos de consenso. Hyperledger recomienda tres: Solo (dev), kafka, Raft. El ordenador utiliza un protocolo de transmisión atómica para recibir instrucciones de datos. Se detallará un poco más en las componentes del framework
 
 \begin{itemize}
 	\item Solo: Recomendado solo para el entorno de desarrollo porque no tiene un sistema tolerante a fallas (se espera que desaparezca en la versión 2.+)
@@ -94,15 +97,16 @@ El término chaincode hace referencia a la sección de código que define la ló
 \end{figure}
 
 \subsection{Flujo}
-Para garantizar la coherencia e integridad de los datos, Hyperledger Fabric implementa varios puntos de comprobación en todo el flujo de transacciones, incluidas la autenticación de cliente, aprobación, ordenación y confirmación en el ledger \ref{fig:3}.
+Para garantizar la coherencia e integridad de los datos, Hyperledger Fabric implementa varios puntos de comprobación en todo el flujo de transacciones, incluidas la autenticación de cliente, aprobación, ordenación y confirmación en el ledger (Figura \ref{fig:3}).
 
 \begin{figure}[h]
-	\includegraphics[width=\linewidth]{Graphics/txflow.png}
+	\centering
+	\includegraphics[scale=0.5]{Graphics/txflow.png}
 	\caption{Flujo completo de una transacción en Hyperledger Fabric}
 	\label{fig:4}
 \end{figure}
 
-En una red de Hyperledger Fabric, el flujo de datos \ref{fig:4} para consultas y transacciones se inicia desde una aplicación del lado de cliente mediante el envío de una solicitud de transacción a un peer de un canal. El flujo de datos inicial a través de la red es común para ambas:
+En una red de Hyperledger Fabric, el flujo de datos (Figura \ref{fig:4}) para consultas y transacciones se inicia desde una aplicación del lado del cliente mediante el envío de una solicitud de transacción a un peer de un canal. El flujo de datos inicial a través de la red es común para ambas:
 \begin{enumerate}
 	\item Mediante las API disponibles en el SDK, una aplicación cliente firma y envía una propuesta de transacción a los peers de aprobación adecuados en el canal especificado. Esta propuesta de transacción inicial es una solicitud de aprobación.
 
@@ -125,7 +129,7 @@ El protocolo gossip de diseminación de datos difunde continuamente los datos de
 \subsection{SDK de Fabric}
 Los SDK de Hyperledger Fabric permiten a los desarrolladores de aplicaciones crear aplicaciones que interactúan con una red blockchain. Estos SDK permiten que las aplicaciones gestionen del ciclo de vida de los canales y del código de encadenamiento.
 
-Hyperledger Fabric proporciona SDK en diversos lenguajes y ofrece las funciones siguientes para la interacción con la red blockchain:
+Hyperledger Fabric proporciona un SDK para algunos lenguajes de programación que ofrece las funciones siguientes para la interacción con la red blockchain:
 
 \begin{itemize}
 	\item Registrar e inscribir usuarios
@@ -154,7 +158,7 @@ El lenguaje de programación Go es un proyecto de código abierto para hacer que
 Go es expresivo, conciso, limpio y eficiente. Sus mecanismos de concurrencia facilitan la escritura de programas que aprovechan al máximo las máquinas multinúcleo y en red, mientras que su sistema de tipos permite la construcción de programas modulares y flexibles. Go compila rápidamente en código de máquina pero tiene la comodidad de un Garbage Collector y el poder de la reflexión en tiempo de ejecución. Es un lenguaje compilado, tipificado estáticamente que se siente como un lenguaje interpretado y de tipado dinámico.
 
 \subsubsection{Rendimiento}
-Uno de los beneficios más considerables de usar C, C++ sobre otros lenguajes modernos de alto nivel como Java/Python es su rendimiento. La diferencia de rendimiento está en que C/C++ se compilan y no se interpretan. Los procesadores solo entienden binario y los lenguajes interpretados necesitan aplicar más traducciones sobre el código original \ref{fig:5}. Suele ser común una relación de proporcionalidad inversa entre redibilidad y rendimiento sin embargo go encuentra un punto bastante avanzado en ambos aspectos \ref{fig:6} .
+Uno de los beneficios más considerables de usar C, C++ sobre otros lenguajes modernos de alto nivel como Java/Python es su rendimiento. La diferencia de rendimiento está en que C/C++ se compilan y no se interpretan. Los procesadores solo entienden binario y los lenguajes interpretados necesitan aplicar más traducciones sobre el código original (Figura \ref{fig:5}). Suele ser común una relación de proporcionalidad inversa entre redibilidad y rendimiento sin embargo go encuentra un punto bastante avanzado en ambos aspectos.
 
 \begin{figure}[h]
 	\includegraphics[width=\linewidth]{Graphics/compiled_go.png}
@@ -163,12 +167,6 @@ Uno de los beneficios más considerables de usar C, C++ sobre otros lenguajes mo
 \end{figure} 
 
 Otro aspecto que influye en el rendimiento de los lenguajes es como se maneja la liberación y asignación de de variables. En lenguajes compilados son procesos tortuosos, pero evitan tener recursos atendiendo a estos detalles automáticamente. La mayoría de los lenguajes de programación de alto nivel utilizan algoritmos de conteo de referencia o recolector de basura como una capa de abstracción para el desarrollador. Go contiene lo mejor de ambos mundos [\cite{whygo}]
-
-\begin{figure}[h]
-	\includegraphics[width=\linewidth]{Graphics/go_rend.png}
-	\caption{Rendimiento de Go vs sintaxis}
-	\label{fig:6}
-\end{figure} 
 
 
 \subsubsection{Concurrencia}
@@ -183,7 +181,7 @@ Go es un lenguaje desplegado en 2009 y tiene ventaja sobre lenguajes como Python
 \subsubsection{Mantenimiento}
 Go es un lenguaje pensado para facilitar el mantenimiento del código por futuros programadores. Un ejemplo es el uso de módulos que desacoplan las funcionalidades del programa. Otro aspecto para hacer más sencillo el mantenimiento es la legibilidad. Teniendo en cuenta esto, los desarrolladores de Go diseñaron una sintaxis más agradable y eliminaron elementos del lenguaje como clases y por consiguiente la herencia; anotaciones, excepciones y la genericidad.
 
-\section{Trabajos relacionados}
+\section{Algunas aplicaciones de blockchain en la certificación de documentos}
 
 %Algunos investigadores han empleado blockchain para diseñar diferentes soluciones en el campo de la emisión, el almacenamiento, la verificación de certificados, la financiación y la gestión de derechos digitales [\cite{blockcerts}][\cite{turkanovic2018eductx}][\cite{sharples2016blockchain}][\cite{gazali2017re}][\cite{guo2020blockchain}]. Los documentos podrían compartirse públicamente con terceros de una manera resistente a la pérdida o alteración de datos.
 
@@ -207,14 +205,14 @@ Go es un lenguaje pensado para facilitar el mantenimiento del código por futuro
 Para lograr el objetivo planteado en este trabajo y responder a las preguntas de investigación, se realizó un estudio sobre el uso de la tecnología blockchain en el sector educativo, específicamente en la emisión de diplomas a los graduados universitarios.
 
 \subsection{Certificados digitales en universidades}
-Actualmente, algunas universidades alrededor del mundo han adoptado varias técnicas para crear sus servicios para emitir y verificar certificados digitales como la Universidad de Johannesburgo (UJ) en Sudáfrica [\cite{80}], la Universidad de Exeter [\cite{76}], y otras más mencionadas en [ \cite{1}]. 
+Actualmente, algunas universidades alrededor del mundo han adoptado varias técnicas para dar servicios de emisión  y verificación de certificados digitales como la Universidad de Johannesburgo (UJ) en Sudáfrica [\cite{80}], la Universidad de Exeter [\cite{76}], y otras más [\cite{1}].
 
-Todos los certificados que emite la Universidad de Johannesburgo (UJ) en Sudáfrica incluyen códigos QR basados en \textit{blockchain}. 
+Todos los certificados que emite la Universidad de Johannesburgo (UJ) incluyen códigos QR basados en \textit{blockchain}. 
 
-La Universidad de Exeter lanzó un pequeño piloto con su clase de Maestría en Tecnología Financiera [\cite{76}]. El piloto permitió a los estudiantes poseer su certificación sin depender de terceros. Los estudiantes ahora pueden ``propietarios'' de sus certificados y demostrar que la Universidad de Exeter emite el diploma en la \textit{blockchain}.
+La Universidad de Exeter lanzó una pequeña aplicación piloto para su curso de Maestría en Tecnología Financiera [\cite{76}]. El piloto permitió a los estudiantes poseer su certificación sin depender de terceros. Los estudiantes ahora pueden ``propietarios'' de sus certificados y demostrar que la Universidad de Exeter emite un diploma certificado por una \textit{blockchain}.
 
 \subsection{BCdiploma}
-Implementado en más de 90 instituciones en una docena de países, BCdiploma (\textit{Blockchain Certified diploma}) [\cite{75}] ofrece un servicio llave en mano para crear y compartir certificados de \textit{blockchain} para todos los documentos académicos: diplomas, transcripciones, habilidades adquiridas, entre otros. 
+Implementado en más de 90 instituciones en una docena de países, BCdiploma (\textit{Blockchain Certified diploma}) [\cite{75}] ofrece un servicio llave en mano para crear y compartir certificados de \textit{blockchain} para variados documentos académicos: como títulos, diplomas, transcripciones o habilidades adquiridas.
 
 Desde enero de 2021 [\cite{75, 78}], los graduados de Montpellier Business School reciben una versión digital de su diploma, una credencial digital emitida con la solución BCdiploma.
 

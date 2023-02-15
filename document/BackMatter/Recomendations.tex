@@ -1,16 +1,12 @@
 \begin{recomendations}
-El sistema propuesto en este documento tiene áreas en las que seguir mejorando y una de las formas más comunes de mejorar es mediante la retroalimentación. Una vez las autoridades pertinentes se encuentren utilizando el sistema se les puede consultar que funcionalidades creen que son necesarias agregar o eliminar de las ya existentes. Deben ser consultados también las opiniones de los desarrolladores de terceras aplicaciones que decidan conectarse a los endpoints del sistema.
+Una vez las autoridades pertinentes adopten y empiecen a aplicar el sistema se obtendría la retroalimentación necesaria para seguirlo mejorando. Se espera poder contar también con las opiniones de terceros desarrolladores interesados en conectarse a los endpoints del sistema.
 
-Se recomienda que en una futura versión el sistema de usuarios esté también escrito en la blockchain y se empiecen a utilizar certificados digitales (no confundir con los certificados académicos sobre los que trataba este trabajo) para cada uno de esos usuarios. Para ello es necesario el uso de una Autoridad Certificadora que gestione el sistema de llaves públicas y privadas que hace posible la criptografía necesaria para garantizar la seguridad. Con estos certificados digitales, los usuarios que interactúan y gestionan el sistema pueden dar fe de determinado criterio usando su firma digital.
+Se recomienda en una futura versión conectar la dapp con una wallet para dotar de identidades criptográficas a los usuarios.
+Otra opción podría ser usar una tecnología de identidad descentralizada como Hyperledger Indy. Teniendo los usuarios identidades criptográficas se logra una capa de seguridad extra. Por ejemplo, el proceso de validación de los certificados por el Secretario General, por el Decano de la facultad y por el Rector de la universidad podría realizarse usando el concepto de llave pública y privada de la criptografía asimétrica.
 
+Se aconseja también utilizar Casbin como biblioteca que maneja el control de acceso a funcionalidades. Casbin permite abordar la problemática de una manera escalable y elegante.
 
-Una vez concluido el proceso de desarrollo de la solución propuesta, cumplidos los objetivos trazados y teniendo en cuenta que es una primera versión del sistema, se recomienda:
-%aprovechando sobre todo la escalabilidad de la cual se ha intentado dotar al proyecto:
-\begin{itemize}
-  	\item Ampliar el equipo con un nuevo diseñador de interfaces de usuario encargado de crear interfaces mucho más profesionales, consiguiendo mejorar de manera notoria la experiencia del usuario.
-   	%\item Someter el sistema a pruebas de calidad.
-   	\item Analizar los beneficios que traería el desarrollo de esta solución como una aplicación móvil y el empleo de códigos QR.
-    \item Permitir el acceso al \textit{software} a otras universidades del país con el objetivo de crear un consorcio de instituciones académicas para la validación y emisión de certificaciones.
-\end{itemize}
-    
+Por otro lado se recomienda utilizar los conocimientos de los modelos relacionales y reestructurar los datos de los Certificados. Si se lleva su representación a una estructura que cumpla con la Tercera Forma Normal se logrará ahorrar espacio y eliminar potenciales multirepresentaciones del mismo dato.
+
+La infraestructura aquí descrita puede ser aprovechada para más que los títulos, pueden incluirse también certificaciones de notas, planes de estudios o acreditaciones de publicaciones de artículos y libros. El sistema aquí propuesto puede convertirse en la traza de todo el recorrido educacional e investigativo de los egresados con nivel de estudios superiores en Cuba. Siendo tan sencillo conocer las credenciales de una persona como dar un click.
 \end{recomendations}
